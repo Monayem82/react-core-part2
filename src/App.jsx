@@ -5,6 +5,8 @@ import Player from './components/players'
 import Users from './components/Users'
 import Friends from './components/Friends'
 import Posts from './components/Posts'
+import Persons from './components/Persons'
+import Showhide from './components/Showhide'
 
 const fetchUser=fetch('https://jsonplaceholder.typicode.com/users')
                 .then(res=>res.json())
@@ -42,6 +44,11 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+
+      <Showhide></Showhide>
+
+      <Persons></Persons>
+
       <Suspense fallback={<h3>Loading Post....</h3>}>
           <Posts postsData={postsData}></Posts>
       </Suspense>
